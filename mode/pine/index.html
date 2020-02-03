@@ -1,0 +1,56 @@
+<!doctype html>
+
+<title>CodeMirror: Pine mode</title>
+<meta charset="utf-8"/>
+<link rel=stylesheet href="../../doc/docs.css">
+
+<link rel="stylesheet" href="../../lib/codemirror.css">
+<link rel="stylesheet" href="../../theme/monokai.css">
+
+<script src="../../lib/codemirror.js"></script>
+<script src="../../addon/mode/simple.js"></script>
+<script src="pine.js"></script>
+<style>.CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}</style>
+<div id=nav>
+  <a href="https://codemirror.net"><h1>CodeMirror</h1><img id=logo src="../../doc/logo.png" alt=""></a>
+
+  <ul>
+    <li><a href="../../index.html">Home</a>
+    <li><a href="../../doc/manual.html">Manual</a>
+    <li><a href="https://github.com/codemirror/codemirror">Code</a>
+  </ul>
+  <ul>
+    <li><a href="../index.html">Language modes</a>
+    <li><a class=active href="#">Pine</a>
+  </ul>
+</div>
+
+<article>
+<h2>Pine mode</h2>
+
+
+<div><textarea id="code" name="code">
+"hello"
+var if else
+bool
+true false
+// hello 
+#FFFFFF
+1 + 2 and 3 / 4 and 5 >= 12
+ab.cc
+
+s(x, y) => 
+</textarea></div>
+
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        lineWrapping: true,
+        indentUnit: 4,
+        mode: "pine",
+        theme: "monokai"
+      });
+    </script>
+
+    <p><strong>MIME types defined:</strong> <code>text/x-pine</code>.</p>
+  </article>
